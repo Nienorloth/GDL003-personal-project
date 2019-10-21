@@ -5,13 +5,18 @@ Cuaderno de colecta
 Se creará una aplicación para dispositivos móviles, con la funcionalidad de la aplicación web "Cuaderno de colecta" creada anteriormente con react en el proyecto "Lab notes".
 
 ## Introducción
-Para este proyecto se adaptará el proyecto de "Cuaderno de colecta" de react a react native, para que se pueda utilizar como una app móvil.
 
-El proyecto de desarrollo web cuenta con la funcionalidad de crear notas con campos predefinidos para almacenar la información taxonómica de colectas de campo. Estas notas se pueden almacenar en 3 cuadernos pre existentes según el tipo de especimenes colectados. También se pueden editar, eliminar y agregar una imagen. Durante este proyecto se mejorará la experiencia de usuario con la funcionalidad ya existente y se agregarán nuevas características, como georreferenciación para capturar las coordenadas del sitio de colecta y la posibilidad de crear cuadernos de colecta.
+- Se adaptará el proyecto "Cuaderno de colecta" de react a react native, para que se pueda utilizar como una app móvil.
+
+- El proyecto de desarrollo web ya cuenta con la funcionalidad de crear notas con campos predefinidos para almacenar la información taxonómica de colectas de campo. Estas notas se pueden almacenar en 3 cuadernos pre existentes según el tipo de especimenes colectados. También se pueden editar, eliminar y agregar una imagen.
+
+- Durante este proyecto se agregarán nuevas características, como georreferenciación para capturar las coordenadas del sitio de colecta y la posibilidad de crear cuadernos de colecta.
 
 ## Objetivos de aprendizaje
 
 - Aprender a utilizar react native, así como sus apis.
+
+- Conocer el framework de react native.
 
 - Aprender funciones más avanzadas de firebase.
 
@@ -37,4 +42,4 @@ El proyecto de desarrollo web cuenta con la funcionalidad de crear notas con cam
 Una vez logrados los avances esperados, se implementará la visualización de un mapa con los sitios de colecta marcados, con la opción de filtrar los sitios de colecta de cada cuaderno.
 
 ## Uso
-Para poder correr la aplicación, el usuario deberá descargarla de una app store e instalarla.
+Para poder colaborar con el proyecto se debe hacer clon del respositorio y hacer npm install para instalar las dependencias del proyecto.
