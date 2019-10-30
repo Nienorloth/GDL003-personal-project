@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from './../../../product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +36,7 @@ export class ProductsService {
       description: 'Collar con piedras y concha'
     }
   ];
-
-
+  
   constructor() { }
 
   getAllProducts() {
