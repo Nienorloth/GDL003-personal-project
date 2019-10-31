@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './../../../product.model';
+import { Product } from '../../../core/models/product.model';
 
 
 @Component({
@@ -37,7 +37,21 @@ export class ProductsComponent implements OnInit {
       title: 'Collar',
       price: 280,
       description: 'Collar con piedras y concha'
-    }
+    },
+    {
+    id: '5',
+    image: 'assets/images/300_2.jpg',
+    title: 'Pulsera',
+    price: 300,
+    description: 'Pulsera de plata'
+  },
+  {
+    id: '6',
+    image: 'assets/images/1.jpg',
+    title: 'Pulsera',
+    price: 180,
+    description: 'Pulsera de libélula/Árbol. Acero inoxidable'
+  }
   ];
 
   constructor() { }

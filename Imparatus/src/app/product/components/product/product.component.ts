@@ -1,23 +1,41 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
 
-import { Product } from '../../../product.model';
-import { Event } from '@angular/router';
+import { Product } from './../../../core/models/product.model';
 
 @Component({
-    selector: 'app-product',
-    templateUrl: './product.component.html',
-    styleUrls: ['./product.component.scss']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss']
 })
+export class ProductComponent implements OnInit, OnDestroy {
 
-export class ProductComponent {
+  @Input() product: Product;
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-   @Input() product: Product;
-   @Output() productClicked: EventEmitter<any> = new EventEmitter();
+  today = new Date();
 
-    today = new Date();
+  constructor() {
+    console.log('1. constructor');
+  }
 
-   addCart() {
-       console.log('Añadir al carrito');
-       this.productClicked.emit(this.product.id);
-   }
+  ngOnInit() {
+    console.log('3. ngOnInit');
+  }
+
+  ngOnDestroy() {
+    console.log('5. ngOnDestroy');
+  }
+
+  addCart() {
+    console.log('añadir al carrito');
+    this.productClicked.emit(this.product.id);
+  }
+
 }
