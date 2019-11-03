@@ -1,62 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../core/models/product.model';
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import { ProductsService } from '../../../core/services/products/products.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
+  providers:  [ ProductsService ]
 })
 export class ProductsComponent implements OnInit {
+ products: any;
 
-  products: Product[] = [
-    {
-      id: '1',
-      image: 'assets/images/Anillo ojo_120.jpg',
-      title: 'Anillo',
-      price: 120,
-      description: 'Anillo con ojo'
-    },
-    {
-      id: '2',
-      image: 'assets/images/200.jpg',
-      title: 'Arracadas',
-      price: 200,
-      description: 'Aretes de plata estilo arracadas gruesas'
-    },
-    {
-      id: '3',
-      image: 'assets/images/240.jpg',
-      title: 'Pulsera con ojo',
-      price: 240,
-      description: 'Pulsera de plata con ojo'
-    },
-    {
-      id: '4',
-      image: 'assets/images/280.jpg',
-      title: 'Collar',
-      price: 280,
-      description: 'Collar con piedras y concha'
-    },
-    {
-    id: '5',
-    image: 'assets/images/300_2.jpg',
-    title: 'Pulsera',
-    price: 300,
-    description: 'Pulsera de plata'
-  },
-  {
-    id: '6',
-    image: 'assets/images/1.jpg',
-    title: 'Pulsera',
-    price: 180,
-    description: 'Pulsera de libélula/Árbol. Acero inoxidable'
-  }
-  ];
+  constructor(private service: ProductsService) {
+   }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(){
+    this.service.getAllProducts().subscribe(r => {
+      this.products = r.map(i => {
+        return { id: i.payload.doc.id, ...i.payload.doc.data() };
+      });
+    });
   }
   clickProduct(id: number) {
     console.log('product');

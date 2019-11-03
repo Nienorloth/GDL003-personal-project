@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class ProductsService {
     {
       id: '1',
       image: 'assets/images/Anillo ojo_120.jpg',
-      title: 'Anillo',
+      title: 'Anillo2',
       price: 120,
       description: 'Anillo con ojo'
     },
@@ -50,11 +52,10 @@ export class ProductsService {
       description: 'Pulsera de libélula/Árbol. Acero inoxidable'
         }
     ];
-  
-  constructor() { }
+  constructor( private firestore: AngularFirestore ) { }
 
-  getAllProducts() {
-     return this.products;
+  public getAllProducts() {
+    return this.firestore.collection('Imparatus').snapshotChanges();
   }
   getProduct(id: string) {
     return this.products.find(item => id === item.id)
