@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../core/models/product.model';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { ProductsService } from '../../../core/services/products/products.service';
 
 @Component({
@@ -10,21 +9,26 @@ import { ProductsService } from '../../../core/services/products/products.servic
   providers:  [ ProductsService ]
 })
 export class ProductsComponent implements OnInit {
- products: any;
+ products: Product[] = [];
 
-  constructor(private service: ProductsService) {
-   }
+  constructor(
+    private productsService: ProductsService
+    ) { }
 
   ngOnInit(){
-    this.service.getAllProducts().subscribe(r => {
-      this.products = r.map(i => {
-        return { id: i.payload.doc.id, ...i.payload.doc.data() };
-      });
-    });
+    this.fetchProducts();
   }
+
   clickProduct(id: number) {
     console.log('product');
     console.log(id);
+  }
+
+  fetchProducts() {
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      this.products = products;
+    });
   }
 
 }
