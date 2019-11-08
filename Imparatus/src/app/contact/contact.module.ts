@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
     declarations: [
@@ -11,7 +16,11 @@ import { ContactRoutingModule } from './contact-routing.module';
     ],
     imports: [
         ContactRoutingModule,
-        CommonModule
+        CommonModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule
     ]
 })
 export class ContactModule {

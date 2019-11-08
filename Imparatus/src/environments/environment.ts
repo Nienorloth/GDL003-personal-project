@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  url_api: 'https://floating-savannah-95962.herokuapp.com',
   firebase: {
     apiKey: 'AIzaSyAoMCUVeDmK3d1XfULUFEBGV_ZCmAhiH6Y',
     authDomain: 'imparatus-bf272.firebaseapp.com',
