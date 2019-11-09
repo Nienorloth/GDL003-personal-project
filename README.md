@@ -1,35 +1,23 @@
-# Titulo
-Tienda en línea
+# Imparatus
 
-## Preámbulo
-Se creará la tienda en línea de Imparatus, línea de joyería y accesorios, utilizando el framework de angular y firebase.
 
-## Introducción
+Tienda en línea de Imparatus: línea de joyería y accesorios, utilizando Angular CLI y angular material; conectando con la API creada para Imparatus, desplegada en heroku y con una base de datos en mongo DB Atlas.
 
-- La tienda/tattoo studio "Imparatus" necesita una tienda en línea donde se muestren sus productos y se puedan agregar a un carrito para hacer compras por internet.
+## Características
 
-## Objetivos de aprendizaje
+- La tienda/tattoo studio "Imparatus" cuenta con una línea de joyería y accesorios, disponibles en esta tienda en línea, en la que el usuario puede:
 
-- Conocer el framework de Angular.
+- Ver el catálogo de productos con descripción y precio.
+- Ver detalle de los productos agrandando las imágenes.
+- Agregar productos a un carrito para hacer un pedido.
 
-- Aprender funciones más avanzadas de firebase.
+Además, el administrador puede acceder a una página de admin con la ruta /admin donde podrá:
 
--Conocer bibliotecas y frameworks para angular.
-
-## Avances esperados
-
-- El usuario podrá ver un catálogo de todos los productos con fotografía y precio.
-
-- El usuario podrá acceder a detalles de cada producto, así como una visión más amplia de la fotografía, haciendo click en cada producto.
-
-- El usuario podrá agregar productos a un carrito para posteriormente ingresar una orden de compra.
-
-## Consideraciones Generales
-
-- 
-
-## Hacker Edition
-
+- Ver el listado de sus productos, para editar o eliminar entradas.
+- Agregar productos nuevos llenando los campos de información.
+- Subir una imagen para cada producto.
+- Ver la lista de pedidos y su status.
 
 ## Uso
-Para poder colaborar con el proyecto se debe hacer clon del respositorio y hacer npm install para instalar las dependencias del proyecto.
+
+Para acceder tan solo hay que entrar a la siguiente URL:
