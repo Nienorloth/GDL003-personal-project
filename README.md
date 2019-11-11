@@ -21,3 +21,9 @@ Además, el administrador puede acceder a una página de admin con la ruta /admi
 ## Uso
 
 Para acceder tan solo hay que entrar a la siguiente URL:
+https://imparatus-bf272.firebaseapp.com/#/home
+
+## Administrador
+
+Para acceder a las funciones de administrador (protegida por contraseña):
+https://imparatus-bf272.firebaseapp.com/#/admin
