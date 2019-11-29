@@ -5,7 +5,7 @@ Tienda en línea de Imparatus: línea de joyería y accesorios, utilizando Angul
 
 ## Características
 
-- La tienda/tattoo studio "Imparatus" cuenta con una línea de joyería y accesorios, disponibles en esta tienda en línea, en la que el usuario puede:
+La tienda/tattoo studio "Imparatus" cuenta con una línea de joyería y accesorios, disponibles en esta tienda en línea, en la que el usuario puede:
 
 - Ver el catálogo de productos con descripción y precio.
 - Ver detalle de los productos agrandando las imágenes.
@@ -27,3 +27,6 @@ https://imparatus-bf272.firebaseapp.com/#/home
 
 Para acceder a las funciones de administrador (protegida por contraseña):
 https://imparatus-bf272.firebaseapp.com/#/admin
+
+Para crear una cuenta de administrador con contraseña:
+https://imparatus-bf272.firebaseapp.com/#/auth/register
